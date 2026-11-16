@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>登录 · 温氏采购</title>
+  <link rel="stylesheet" href="./vendor/fonts/google-fonts.css" />
+  <link rel="stylesheet" href="./login.css?v=frame27" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three.module.min.js",
+        "three/addons/": "./vendor/addons/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="login-page">
+    <section class="scene" id="scene" aria-hidden="true">
+      <div class="scene-stage" id="sceneStage"></div>
+    </section>
+
+    <form class="auth" id="authForm" autocomplete="on">
+      <label class="field">
+        <span>用户名或手机号</span>
+        <input name="account" type="text" autocomplete="username" />
+      </label>
+      <label class="field">
+        <span>密码</span>
+        <input name="password" type="password" autocomplete="current-password" />
+      </label>
+      <p class="form-error" id="formError" hidden></p>
+      <button class="btn" type="submit">登录</button>
+      <p class="switch">没有账号？<button class="text-link" type="button" id="toSignup">去注册</button></p>
+    </form>
+
+    <form class="auth auth-signup" id="signupForm" autocomplete="on" hidden>
+      <label class="field">
+        <span>用户名</span>
+        <input name="username" type="text" autocomplete="username" />
+      </label>
+      <label class="field">
+        <span>姓名</span>
+        <input name="fullname" type="text" autocomplete="name" />
+      </label>
+      <label class="field">
+        <span>邮箱</span>
+        <input name="email" type="email" autocomplete="email" inputmode="email" />
+      </label>
+      <label class="field">
+        <span>电话号码</span>
+        <input name="phone" type="tel" autocomplete="tel" inputmode="tel" />
+      </label>
+      <label class="field">
+        <span>密码</span>
+        <input name="password" type="password" autocomplete="new-password" />
+      </label>
+      <p class="form-error" id="signupError" hidden></p>
+      <button class="btn" type="submit">注册</button>
+      <p class="switch">已有账号？<button class="text-link" type="button" id="toLogin">去登录</button></p>
+    </form>
+  </main>
+  <script src="./vendor/gsap.min.js"></script>
+  <script type="module" src="./login.js?v=arch72"></script>
+</body>
+</html>
